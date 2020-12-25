@@ -6,4 +6,7 @@
 #outer{
     width: 500px;
     margin: 50px auto;
+    padding: 10px;
+    background-color: aquamarine;
+    text-align: center;
 }

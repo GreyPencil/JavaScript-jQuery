@@ -5,11 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <script>
+        window.onload = function(){
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+
+            var img = document.getElementsByTagName("img")[0];
+            var imgArr = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg"];
+            var index = 0;
+            var info = document.getElementById("info");
+
+            info.innerHTML="Total slides:" + imgArr.length + "-----" + (index+1)+"/"+imgArr.length;
+
+            prev.onclick = function(){
+                index--;
+                if(index < 0){
+                    index = imgArr.length-1;
+                }
+                img.src = imgArr[index];
+                info.innerHTML="Total slides:" + imgArr.length + "-----" + (index+1)+"/"+imgArr.length;
+
+            };
+
+            next.onclick = function(){
+                index++;
+                if(index > imgArr.length-1){
+                    index = 0;
+                }
+                img.src = imgArr[index];
+                info.innerHTML="Total slides:" + imgArr.length + "-----" + (index+1)+"/"+imgArr.length;
+
+            };
+
+
+
+        };
+    </script>
 </head>
 <body>
     <div id = "outer">
 
-        <img src="./img/1.jpg" alt="ice-cream">
+        <p id="info"></p>
+
+        <img src="img/1.jpg" alt="ice-cream">
 
         <button id="prev">Prev</button>
         <button id="next">Next</button>
