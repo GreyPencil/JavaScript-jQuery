@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            document.write("我是fun函数");
+        }
+
+        // fun.apply();//我是fun函数
+        // fun.call();//我是fun函数
+        // fun();//我是fun函数
+        var obj ={};
+        fun.call(obj);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

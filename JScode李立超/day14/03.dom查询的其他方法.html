@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <script>
+        window.onload = function(){
+            //获取body标签
+            // var body = document.body;
+            // alert(body);//[object HTMLBodyElement]
+            //获取的是html根标签
+            // var de = document.documentElement;
+            // alert(de);//[object HTMLHtmlElement]
+
+            // var all = document.all;//相当于 all = document.getElementsByTagName("*");
+            // alert(all);//undefined
+            // alert(all.length);//6
+            // for(var i =0; i<all.length;i++){
+            //     alert(all[i]);
+            // }
+
+            // var box1 = document.getElementsByClassName("box1");
+            // document.write(box1);//[object HTMLCollection]
+            // document.writeln(box1.length);
+
+            // var divs = document.getElementsByTagName("div");
+            //获取class为box1中的所有div
+            /*
+            document.querySelector()
+                需要一个选择器的字符串作为参数，可以根据一个CSS选择器来查询一个元素节点对象
+            */
+            var el = document.querySelector(".box1 div");
+            console.log(el.innerHTML);
+
+
+
+        };
+    </script>
+</head>
+<body>
+    <div class="box1">
+        <div>我是box1中的div</div>
+    </div>
+    
+    <div class="box2"></div>
+</body>
+</html>
