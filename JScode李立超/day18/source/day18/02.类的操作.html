@@ -12,6 +12,7 @@
 			}
 			
 			.b2{
+				/* width: 200px; */
 				height: 300px;
 				background-color: yellow;
 			}
@@ -48,7 +49,7 @@
 					 * 	浏览器只需要重新渲染页面一次，性能比较好，
 					 * 	并且这种方式，可以使表现和行为进一步的分离
 					 */
-					//box.className += " b2";
+					//box.className += " b2";//注意空格！b1 b2相同部分 b2会覆盖b1
 					//addClass(box,"b2");
 					
 					//alert(hasClass(box,"hello"));
@@ -85,7 +86,7 @@
 				
 				//判断obj中有没有cn class
 				//创建一个正则表达式
-				//var reg = /\bb2\b/;
+				//var reg = /\bb2\b/; 单词边界\b
 				var reg = new RegExp("\\b"+cn+"\\b");
 				
 				return reg.test(obj.className);
